@@ -40,12 +40,6 @@ func set_value_no_signal(new) -> void:
 # Logic
 func _ready() -> void:
 	super()
-
-	box.add_child(range_x)
-	box.add_child(range_y)
-	box.add_child(range_z)
-	box.add_child(range_w)
-
 	range_x.setup("X:", min_value, max_value, step, prefix, suffix)
 	range_x.value_changed.connect(_on_range_x_changed)
 
@@ -57,6 +51,12 @@ func _ready() -> void:
 
 	range_w.setup("W:", min_value, max_value, step, prefix, suffix)
 	range_w.value_changed.connect(_on_range_w_changed)
+
+
+	box.add_child(range_x)
+	box.add_child(range_y)
+	box.add_child(range_z)
+	box.add_child(range_w)
 
 	_set_value(value)
 

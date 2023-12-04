@@ -40,14 +40,14 @@ func set_value_no_signal(new) -> void:
 func _ready() -> void:
 	super()
 
-	box.add_child(range_basis)
-	box.add_child(range_origin)
-
 	range_basis.setup("Basis:", min_value, max_value, step, prefix, suffix)
 	range_basis.value_changed.connect(_on_range_basis_changed)
 
 	range_origin.setup("Origin:", min_value, max_value, step, prefix, suffix)
 	range_origin.value_changed.connect(_on_range_origin_changed)
+
+	box.add_child(range_basis)
+	box.add_child(range_origin)
 
 	_set_value(value)
 

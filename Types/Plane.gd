@@ -42,12 +42,6 @@ func set_value_no_signal(new) -> void:
 func _ready() -> void:
 	super()
 
-	box.add_child(range_x)
-	box.add_child(range_y)
-	box.add_child(range_z)
-	box.add_child(range_d)
-	box.add_child(normal)
-
 	range_x.setup("X:", min_value, max_value, step, prefix, suffix)
 	range_x.value_changed.connect(_on_range_x_changed)
 
@@ -62,6 +56,12 @@ func _ready() -> void:
 
 	normal.setup("Normal:", min_value, max_value, step, prefix, suffix)
 	normal.value_changed.connect(_on_normal_changed)
+
+	box.add_child(range_x)
+	box.add_child(range_y)
+	box.add_child(range_z)
+	box.add_child(range_d)
+	box.add_child(normal)
 
 	_set_value(value)
 

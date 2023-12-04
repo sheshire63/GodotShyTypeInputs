@@ -42,10 +42,6 @@ func set_value_no_signal(new) -> void:
 func _ready() -> void:
 	super()
 
-	box.add_child(range_pos)
-	box.add_child(range_size)
-	box.add_child(range_end)
-
 	range_pos.setup("Position:", min_value, max_value, step, prefix, suffix)
 	range_pos.value_changed.connect(_on_range_pos_changed)
 
@@ -54,6 +50,10 @@ func _ready() -> void:
 
 	range_end.setup("End:", min_value, max_value, step, prefix, suffix)
 	range_end.value_changed.connect(_on_range_end_changed)
+
+	box.add_child(range_pos)
+	box.add_child(range_size)
+	box.add_child(range_end)
 
 	_set_value(value)
 

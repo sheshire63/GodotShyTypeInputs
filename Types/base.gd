@@ -77,7 +77,7 @@ func _ready() -> void:
 		var offset := MarginContainer.new()
 		box = VBoxContainer.new()
 
-		label_button.icon = icon_show
+		label_button.icon = icon_hide
 		label_button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		label_button.pressed.connect(toggle_show_box)
 		add_child(label_button)
