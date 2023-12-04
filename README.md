@@ -6,15 +6,34 @@ This Godot plugin adds unified Input Controls for the different buildin types
 
 ## Features
 - **Supported Types:**
+  - bool
+  - int
+  - float
+  - color
+
   - Vector2
+  - Vector2i
+  - Vector3i
+  - Vector3
+  - Vector4
+  - Vector4i
+
+  - Rect2
+  - Rect2i
   - Transform2D
-  - [Add more types as needed]
+
+  - Plane
+  - Quaternion
+  - AABB
+  - Basis
+  - Transform3D
+  - Projection
 
 ## Installation
 
 1. Clone/Download the project into your Godot project's `addons` folder.
 2. Activate the Plugin in the Project Settings
-   
+
 
 ## Usage
 
